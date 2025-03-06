@@ -7,3 +7,13 @@ sounds.forEach((sound) => {
     btn.innerText = sound;
     document.getElementById('buttons').appendChild(btn);
 });
+
+//Helper Sounds stop sounds from overlapping
+function stopSounds() {
+    sounds.forEach((sound) => {
+        const snd = document.getElementById(sound);
+
+        snd.pause();
+        snd.currentTime = 0;
+    });
+}
